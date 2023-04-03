@@ -18,7 +18,7 @@
    ===============================
 */
 
-@media only screen and (max-width: 640px){
+@media screen and (max-width: 640px){
 table,tbody,tr,td,th,caption{
    display: block;
 }
@@ -50,35 +50,52 @@ td::before{
    width: 40%;
    padding-right: 5px;
 }
-
+}
 
 /* =============================================
    Tablet and Desktop Styles: greater than 640px
    =============================================
 */
-@media only screen and (min-width: 641px){
-   table,tbody,tr,td,th,caption{
-      display: block;
-      border-left: 1px solid gray;
-      border-right: 1px solid gray;
-      min-height: 100%;   
-      margin: 0px auto;
-      min-width: 400px;
-      max-width: 1024px;   
-      width: 100%; 
+@media screen and (min-width: 641px){
+   table{
+      background-image: url("lht_photo1.png");
+      background-repeat: no-repeat;
+      background-position: right bottom;
+      background-size: 40%;
+      border: 6px double rgb(154,64,3);
+      border-collapse: collapse;
+      margin: 20px auto;
+      width: 85%;
    }
-   
+   td,th{
+      border: 1px solid gray;
+      font-size: 0.85em;
+      font-weight: normal;
+      padding: 5px;
+      vertical-align: top;
+      width: 14.28%;
+      word-wrap: break-word;
+   }
    caption{
+      caption-side: top;
+      text-align: center;
+      padding-bottom: 10px;
+      font-size: 1.2em;
+      letter-spacing: 3px;
       color: white;
       background-color: #333333;
-      font-size: 1.5em;
       line-height: 2em;
    }
    td{
-      border: 1px dotted gray;
+      background-color: rgba(171, 171, 171, 0.6);
       color: rgb(11,12,145);
-      position: relative;
-      padding-left: 40%;
-      min-height: 40px;
+   }
+   td[data-date~="Sept"]{
+      background-color: rgba(232, 214, 148, 0.6);
+      box-shadow: inset 0px 0px 20px gray;
+   }
+   thead th{
+      color: white;
+      background-color: rgb(154, 64, 3);
    }
 }
