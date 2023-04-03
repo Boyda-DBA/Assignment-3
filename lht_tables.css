@@ -31,6 +31,24 @@ caption{
    font-size: 1.5em;
    line-height: 2em;
 }
+td{
+   border: 1px dotted gray;
+   color: rgb(11,12,145);
+   position: relative;
+   padding-left: 40%;
+   min-height: 40px;
+}
+tr:nth-of-type(odd){
+   background-color: rgb(255,235,178);
+   border: 2px solid gray;
+}
+td::before{
+   content: attr(data-date);
+   position: absolute;
+   left: 0px;
+   top: 0px;
+   width: 40%;
+   padding-right: 5px;
 }
 
 
@@ -39,5 +57,28 @@ caption{
    =============================================
 */
 @media only screen and (min-width: 641px){
+   table,tbody,tr,td,th,caption{
+      display: block;
+      border-left: 1px solid gray;
+      border-right: 1px solid gray;
+      min-height: 100%;   
+      margin: 0px auto;
+      min-width: 400px;
+      max-width: 1024px;   
+      width: 100%; 
+   }
    
+   caption{
+      color: white;
+      background-color: #333333;
+      font-size: 1.5em;
+      line-height: 2em;
+   }
+   td{
+      border: 1px dotted gray;
+      color: rgb(11,12,145);
+      position: relative;
+      padding-left: 40%;
+      min-height: 40px;
+   }
 }
